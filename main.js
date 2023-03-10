@@ -11,33 +11,33 @@ function main() {
     "kepek/medve.jpg",
     "kepek/taj.jpg",
   ];
-  const article = document.querySelector("article");
+  const ARTICLE = document.querySelector("article");
   let i;
   for (i = 0; i < lista.length; i++) {
-    article.innerHTML += `<div><img src="${lista[i]}" alt=""></div>`;
+    ARTICLE.innerHTML += `<div><img src="${lista[i]}" alt=""></div>`;
   }
   let currentIndex = 0;
-  const nagykep = document.querySelectorAll(".nagykep img")[0];
-  const jobb = document.getElementsByClassName("jobb")[0];
-  jobb.addEventListener("click", function () {
+  const NAGYKEP = document.querySelectorAll(".nagykep img")[0];
+  const JOBB = document.getElementsByClassName("jobb")[0];
+  JOBB.addEventListener("click", function () {
     currentIndex++;
     if (currentIndex > lista.length - 1) {
       currentIndex = 0;
     }
-    nagykep.src = lista[currentIndex];
+    NAGYKEP.src = lista[currentIndex];
   });
-  const bal = document.getElementsByClassName("bal")[0];
-  bal.addEventListener("click", function () {
+  const BAL = document.getElementsByClassName("bal")[0];
+  BAL.addEventListener("click", function () {
     currentIndex--;
     if (currentIndex < 0) {
       currentIndex = lista.length - 1;
     }
-    nagykep.src = lista[currentIndex];
+    NAGYKEP.src = lista[currentIndex];
   });
-  const kepek = document.querySelectorAll("article div img");
-  for (let j = 0; j < kepek.length; j++) {
-    kepek[j].addEventListener("click", function () {
-      nagykep.src = this.src;
+  const KEPEK = document.querySelectorAll("article div img");
+  for (let j = 0; j < KEPEK.length; j++) {
+    KEPEK[j].addEventListener("click", function () {
+        NAGYKEP.src = this.src;
       currentIndex = j;
     });
   }
