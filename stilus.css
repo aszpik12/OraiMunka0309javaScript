@@ -22,9 +22,13 @@ article div{
     border: 5px dotted rgb(0, 77, 0);
 }
 
+article div{
+    overflow: hidden;
+    width: 25%;
+}
+
 article div img{
-    max-width: 200px;
-    height: 100%;
+    width: 100%;
 }
 
 section{
@@ -46,9 +50,6 @@ section div img{
     section div img{
         width: 300px;
     }
-    article div img{
-        max-width: 150px;
-    }
 }
 
 @media screen and (max-width: 469px){
@@ -57,8 +58,5 @@ section div img{
     }
     section div img{
         width: 200px;
-    }
-    article div img{
-        max-width: 100px;
     }
 }
