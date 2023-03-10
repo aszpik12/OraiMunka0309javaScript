@@ -1,13 +1,64 @@
+*{
+    box-sizing: border-box;
+}
+
 .formazas{
     background-color: aqua;
     border: 1px solid red;
 }
 
 article{
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr 1fr;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
 }
 
-img{
-    max-width: 300px;
+article div{
+    background-color: rgb(1, 255, 115);
+    width: 25%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 5px dotted rgb(0, 77, 0);
+}
+
+article div img{
+    max-width: 200px;
+    height: 100%;
+}
+
+section{
+    background-color: rgb(157, 201, 0);
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+
+section div img{
+    width: 500px;
+    height: 100%;
+}
+
+@media screen and (max-width: 830px){
+    article div{
+        width: 50%;
+    }
+    section div img{
+        width: 300px;
+    }
+    article div img{
+        max-width: 150px;
+    }
+}
+
+@media screen and (max-width: 469px){
+    article div{
+        width: 100%;
+    }
+    section div img{
+        width: 200px;
+    }
+    article div img{
+        max-width: 100px;
+    }
 }
